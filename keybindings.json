@@ -146,9 +146,9 @@
   },
   // Cursor ai commmands:
   {
-    "command": "composer.startComposerPrompt",
+    "command": "workbench.action.toggleAuxiliaryBar",
     "key": "space a a",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal'"
   },
   // Terminal
   {
