@@ -99,8 +99,8 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "command": "workbench.action.gotoSymbol",
-    "key": "space c s",
+    "command": "editor.action.revealDefinition",
+    "key": "g d",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
