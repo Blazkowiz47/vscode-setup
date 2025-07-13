@@ -36,12 +36,11 @@
         "j",
         "k"
       ]
-    },
+    }
   ],
   "vim.neovimConfigPath": "~/.config/nvim/init.lua",
   "vim.neovimPath": "/Applications/nv /bin/nvim",
   "vim.neovimUseConfigFile": true,
-  "vim.normalModeKeyBindings": [],
   "vim.smartRelativeLine": true,
   "workbench.colorTheme": "Tokyo Night Gogh",
   "workbench.iconTheme": "material-icon-theme",
