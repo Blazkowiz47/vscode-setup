@@ -1,56 +1,52 @@
 {
-  "workbench.settings.applyToAllProfiles": ["vim.neovimConfigPath"],
-  "workbench.iconTheme": "material-icon-theme",
-  "vim.easymotionDimBackground": false,
-  "vim.smartRelativeLine": true,
-  "python.analysis.autoFormatStrings": true,
-  "editor.formatOnSave": true,
-  "vim.neovimConfigPath": "~/.config/nvim/init.lua",
-  "vim.neovimPath": "/Applications/nv /bin/nvim",
-  "vim.enableNeovim": true,
-  "vim.neovimUseConfigFile": true,
-  "vim.normalModeKeyBindings": [
-    {
-      "before": []
-    }
-  ],
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    },
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    }
-  ],
-
-  "remote.SSH.remotePlatform": {
-    "10.212.170.97": "linux",
-    "10.212.172.75": "linux",
-    "100.71.125.95": "linux",
-    "10.212.173.215": "linux"
-  },
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [80],
+    "editor.rulers": [
+      80
+    ],
     "editor.selectionHighlight": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": "off"
   },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "terminal.integrated.inheritEnv": false,
-  "workbench.list.smoothScrolling": true,
-  "jupyter.askForKernelRestart": false,
+  "editor.formatOnSave": true,
   "explorer.confirmDragAndDrop": false,
-  "workbench.colorTheme": "Tokyo Night Gogh"
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "git.autofetch": true,
+  "jupyter.askForKernelRestart": false,
+  "keyboard.dispatch": "keyCode",
+  "python.analysis.autoFormatStrings": true,
+  "terminal.integrated.inheritEnv": false,
+  "vim.easymotionDimBackground": false,
+  "vim.enableNeovim": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "j",
+        "k"
+      ]
+    },
+  ],
+  "vim.neovimConfigPath": "~/.config/nvim/init.lua",
+  "vim.neovimPath": "/Applications/nv /bin/nvim",
+  "vim.neovimUseConfigFile": true,
+  "vim.normalModeKeyBindings": [],
+  "vim.smartRelativeLine": true,
+  "workbench.colorTheme": "Tokyo Night Gogh",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.settings.applyToAllProfiles": [
+    "vim.neovimConfigPath"
+  ]
 }
