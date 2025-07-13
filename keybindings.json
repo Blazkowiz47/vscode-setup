@@ -150,11 +150,11 @@
     "key": "space a a",
     "when": "vim.mode == 'Normal'"
   },
-  {
-    "key": "ctrl+y",
-    "command": "editor.action.acceptCursorTabSuggestion",
-    "when": "cpp.shouldAcceptTab"
-  },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "editor.action.acceptCursorTabSuggestion",
+  //   "when": "cpp.shouldAcceptTab"
+  // },
   {
     "key": "ctrl+y",
     "command": "editor.action.inlineSuggest.commit",
