@@ -150,20 +150,40 @@
     "key": "space a a",
     "when": "vim.mode == 'Normal'"
   },
-  // {
-  //   "key": "ctrl+y",
-  //   "command": "editor.action.acceptCursorTabSuggestion",
-  //   "when": "cpp.shouldAcceptTab"
-  // },
   {
     "key": "ctrl+y",
-    "command": "editor.action.inlineSuggest.commit",
-    "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    "command": "editor.action.acceptCursorTabSuggestion",
+    "when": "vim.mode == 'Normal' && cpp.shouldAcceptTab"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.acceptCursorTabSuggestion",
+    "when": "cpp.shouldAcceptTab"
   },
   {
     "key": "ctrl+y",
     "command": "editor.action.inlineSuggest.commit",
-    "when": "inInlineEditsPreviewEditor"
+    "when": "(inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible)"
+  },
+  // Accept suggestions when cursor is visible - Ctrl+Y as primary
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.acceptCursorTabSuggestion",
+    "when": "suggestWidgetVisible && editorTextFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "editor.action.inlineSuggest.commit",
+    "when": "inlineSuggestionVisible && editorTextFocus"
+  },
+  // Disable Tab from accepting suggestions (allow only for indentation)
+  {
+    "key": "tab",
+    "command": "-editor.action.acceptCursorTabSuggestion"
+  },
+  {
+    "key": "tab",
+    "command": "-editor.action.inlineSuggest.commit"
   },
   // Terminal
   {
