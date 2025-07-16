@@ -190,5 +190,5 @@
     "command": "terminal.toggleVisibility",
     "key": "ctrl-`",
     "when": "vim.model == 'Normal' && terminalProcessSupported"
-  },
+  }
 ]
