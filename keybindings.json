@@ -71,12 +71,12 @@
   {
     "command": "editor.action.moveLinesDownAction",
     "key": "shift-j",
-    "when": "vim.mode != insert && vim.mode != 'Normal' && editorTextFocus"
+    "when": "vim.mode != Insert && vim.mode != 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.moveLinesUpAction",
     "key": "shift-k",
-    "when": "vim.mode != insert && vim.mode != 'Normal' && editorTextFocus"
+    "when": "vim.mode != Insert && vim.mode != 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.showHover",
