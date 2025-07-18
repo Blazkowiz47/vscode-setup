@@ -140,6 +140,19 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "args": {
+      "commands": [
+        "ruff.executeAutofix",
+        "editor.action.formatDocument",
+        "ruff.executeOrganizeImports",
+        "ruff.executeAutofix"
+      ]
+    },
+    "command": "runCommands",
+    "key": "space f",
+    "when": "vim.mode == 'Normal' && editorFocus && editorLangId == 'python'"
+  },
+  {
     "command": "editor.action.formatDocument",
     "key": "space f",
     "when": "vim.mode == 'Normal' && editorFocus"
