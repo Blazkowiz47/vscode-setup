@@ -140,22 +140,26 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
+    "command": "python.execInTerminal",
+    "key": "space r p y",
+    "when": "vim.mode == 'Normal' && editorFocus && editorLangId == python"
+  },
+  {
     "args": {
       "commands": [
         "ruff.executeAutofix",
-        "editor.action.formatDocument",
         "ruff.executeOrganizeImports",
         "ruff.executeAutofix"
       ]
     },
     "command": "runCommands",
     "key": "space f",
-    "when": "vim.mode == 'Normal' && editorFocus && editorLangId == 'python'"
+    "when": "vim.mode == 'Normal' && editorFocus"
   },
   {
     "command": "editor.action.formatDocument",
     "key": "space f",
-    "when": "vim.mode == 'Normal' && editorFocus"
+    "when": "vim.mode == 'Normal' && editorFocus && editorLangId != python"
   },
   // Cursor ai commmands:
   {
