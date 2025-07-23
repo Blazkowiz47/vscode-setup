@@ -149,7 +149,7 @@
       "commands": [
         "ruff.executeAutofix",
         "ruff.executeOrganizeImports",
-        "ruff.executeAutofix"
+        "ruff.executeFormat"
       ]
     },
     "command": "runCommands",

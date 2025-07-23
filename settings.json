@@ -1,32 +1,15 @@
 {
-  "[dart]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
-    "editor.selectionHighlight": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": "off"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "IBM Plex Mono",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
   "explorer.confirmDragAndDrop": false,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
   "git.autofetch": true,
-  "jupyter.askForKernelRestart": false,
   "keyboard.dispatch": "keyCode",
-  "python.analysis.autoFormatStrings": true,
   "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.allowChords": false,
   "vim.easymotionDimBackground": false,
-  "vim.enableNeovim": true,
   "vim.insertModeKeyBindings": [
     {
       "after": [
@@ -38,14 +21,21 @@
       ]
     }
   ],
-  "vim.neovimConfigPath": "~/.config/nvim/init.lua",
-  "vim.neovimPath": "/Applications/nv /bin/nvim",
-  "vim.neovimUseConfigFile": true,
   "vim.smartRelativeLine": true,
-  "workbench.colorTheme": "Tokyo Night Gogh",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.list.smoothScrolling": true,
-  "workbench.settings.applyToAllProfiles": [
-    "vim.neovimConfigPath"
-  ]
+  "remote.SSH.remotePlatform": {
+    "10.212.173.215": "linux"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.showHiddenFiles": true,
+  "terminal.integrated.fontFamily": "monospace"
 }
