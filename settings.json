@@ -1,10 +1,7 @@
 {
-  "workbench.settings.applyToAllProfiles": ["vim.neovimConfigPath"],
   "workbench.iconTheme": "material-icon-theme",
   "vim.easymotionDimBackground": false,
   "vim.smartRelativeLine": true,
-  "vim.enableNeovim": true,
-  "vim.neovimUseConfigFile": true,
   "vim.normalModeKeyBindings": [
     {
       "before": []
@@ -21,9 +18,6 @@
     "10.212.172.75": "linux",
     "100.71.125.95": "linux",
     "10.212.173.215": "linux"
-  },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
   },
   "workbench.list.smoothScrolling": true,
   "jupyter.askForKernelRestart": false,
