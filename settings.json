@@ -11,32 +11,42 @@
   "terminal.integrated.allowChords": false,
   // Vim related
   "vim.easymotionDimBackground": false,
+  "vim.smartRelativeLine": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": []
+    }
+  ],
   "vim.insertModeKeyBindings": [
     {
-      "after": [
-        "<Esc>"
-      ],
       "before": [
         "j",
         "k"
+      ],
+      "after": [
+        "<Esc>"
       ]
     }
   ],
-  "vim.smartRelativeLine": true,
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.iconTheme": "material-icon-theme",
   "remote.SSH.remotePlatform": {
+    "10.212.170.97": "linux",
+    "10.212.172.75": "linux",
+    "100.71.125.95": "linux",
     "10.212.173.215": "linux"
   },
+  "jupyter.askForKernelRestart": false,
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "path-intellisense.autoSlashAfterDirectory": true,
-  "path-intellisense.autoTriggerNextSuggestion": true,
-  "path-intellisense.extensionOnImport": true,
-  "path-intellisense.showHiddenFiles": true,
-  "terminal.integrated.fontFamily": "monospace"
+  "editor.cursorBlinking": "smooth",
+  "editor.largeFileOptimizations": false,
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "terminal.integrated.smoothScrolling": true,
 }
