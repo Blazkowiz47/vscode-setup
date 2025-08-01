@@ -6,9 +6,10 @@
   "workbench.list.smoothScrolling": true,
   "explorer.confirmDragAndDrop": false,
   "git.autofetch": true,
-  "keyboard.dispatch": "keyCode",
+  // Terminal related
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.allowChords": false,
+  // Vim related
   "vim.easymotionDimBackground": false,
   "vim.insertModeKeyBindings": [
     {
