@@ -1,5 +1,5 @@
-// Place your key bindings in this file to override the defaults
 [
+  // Place your key bindings in this file to override the defaults
   {
     "command": "toggleVim",
     "key": "ctrl-alt-v"
@@ -71,12 +71,12 @@
   {
     "command": "editor.action.moveLinesDownAction",
     "key": "shift-j",
-    "when": "vim.mode != Insert && vim.mode != 'Normal' && editorTextFocus"
+    "when": "vim.mode != 'Insert' && vim.mode != 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.moveLinesUpAction",
     "key": "shift-k",
-    "when": "vim.mode != Insert && vim.mode != 'Normal' && editorTextFocus"
+    "when": "vim.mode != 'Insert' && vim.mode != 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.showHover",
