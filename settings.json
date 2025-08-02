@@ -1,32 +1,27 @@
 {
+  // Editor config
   "editor.fontFamily": "IBM Plex Mono",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.largeFileOptimizations": false,
+  // Workbench Config
+  "workbench.colorTheme": "Tokyo Night Storm",
   "workbench.list.smoothScrolling": true,
   "explorer.confirmDragAndDrop": false,
   "git.autofetch": true,
   // Terminal related
-  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.allowChords": false,
+  "terminal.integrated.inheritEnv": false,
   // Vim related
   "vim.easymotionDimBackground": false,
   "vim.smartRelativeLine": true,
-  "vim.normalModeKeyBindings": [
-    {
-      "before": []
-    }
-  ],
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<Esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
     }
   ],
   "remote.SSH.remotePlatform": {
@@ -35,7 +30,7 @@
     "100.71.125.95": "linux",
     "10.212.173.215": "linux"
   },
-  "jupyter.askForKernelRestart": false,
+  // Language specific config
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
@@ -44,8 +39,5 @@
   },
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "editor.cursorBlinking": "smooth",
-  "editor.largeFileOptimizations": false,
-  "workbench.colorTheme": "Tokyo Night Storm"
+  }
 }
