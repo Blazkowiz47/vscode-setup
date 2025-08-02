@@ -24,12 +24,12 @@
   {
     "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
     "key": "space p b",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "workbench.action.quickOpen",
     "key": "space p f",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "args": {
@@ -40,7 +40,7 @@
     },
     "command": "runCommands",
     "key": "space p v",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "workbench.action.nextEditorInGroup",
@@ -55,12 +55,12 @@
   {
     "command": "workbench.action.findInFiles",
     "key": "space p s",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "workbench.view.scm",
     "key": "space g g",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "cursorTop",
@@ -86,17 +86,17 @@
   {
     "command": "editor.action.codeAction",
     "key": "space v c a",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.rename",
     "key": "space r n",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "workbench.action.gotoSymbol",
     "key": "space c s",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.revealDefinition",
@@ -142,30 +142,30 @@
   {
     "command": "python.execInTerminal",
     "key": "space r p y",
-    "when": "vim.mode == 'Normal' && editorFocus && editorLangId == python"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus && editorLangId == python"
   },
   {
     "args": {
       "commands": [
         "ruff.executeAutofix",
         "ruff.executeOrganizeImports",
-        "ruff.executeFormat"
+        "ruff.executeAutofix"
       ]
     },
     "command": "runCommands",
     "key": "space f",
-    "when": "vim.mode == 'Normal' && editorFocus"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus"
   },
   {
     "command": "editor.action.formatDocument",
     "key": "space f",
-    "when": "vim.mode == 'Normal' && editorFocus && editorLangId != python"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus && editorLangId != python"
   },
   // Cursor ai commmands:
   {
     "command": "workbench.action.toggleAuxiliaryBar",
     "key": "space a a",
-    "when": "vim.mode == 'Normal'"
+    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal'"
   },
   {
     "key": "ctrl+y",
