@@ -7,29 +7,29 @@
   // Navigation key-bindings
   {
     "command": "workbench.action.navigateDown",
-    "key": "alt-j"
+    "key": "ctrl-j"
   },
   {
     "command": "workbench.action.navigateUp",
-    "key": "alt-k"
+    "key": "ctrl-k"
   },
   {
     "command": "workbench.action.navigateLeft",
-    "key": "alt-h"
+    "key": "ctrl-h"
   },
   {
     "command": "workbench.action.navigateRight",
-    "key": "alt-l"
+    "key": "ctrl-l"
   },
   {
     "command": "workbench.action.showAllEditorsByMostRecentlyUsed",
     "key": "space p b",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "workbench.action.quickOpen",
     "key": "space p f",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "args": {
@@ -40,7 +40,7 @@
     },
     "command": "runCommands",
     "key": "space p v",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!auxiliaryBarFocus && !terminalFocus  && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "workbench.action.nextEditorInGroup",
@@ -55,12 +55,12 @@
   {
     "command": "workbench.action.findInFiles",
     "key": "space p s",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "workbench.view.scm",
     "key": "space g g",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "command": "cursorTop",
@@ -86,17 +86,17 @@
   {
     "command": "editor.action.codeAction",
     "key": "space v c a",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.rename",
     "key": "space r n",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "workbench.action.gotoSymbol",
     "key": "space c s",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && editorTextFocus"
   },
   {
     "command": "editor.action.revealDefinition",
@@ -142,7 +142,7 @@
   {
     "command": "python.execInTerminal",
     "key": "space r p y",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus && editorLangId == python"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus && editorLangId == python"
   },
   {
     "args": {
@@ -154,58 +154,72 @@
     },
     "command": "runCommands",
     "key": "space f",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus"
   },
   {
     "command": "editor.action.formatDocument",
     "key": "space f",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus && editorLangId != python"
+    "when": "!auxiliaryBarFocus && !terminalFocus && vim.mode == 'Normal' && editorFocus && editorLangId != python"
   },
-  // Cursor ai commmands:
+  // Chat ai commmands:
   {
-    "command": "workbench.action.toggleAuxiliaryBar",
+    "args": {
+      "commands": [
+        "workbench.action.toggleAuxiliaryBar",
+        "workbench.action.focusAuxiliaryBar"
+      ]
+    },
+    "command": "runCommands",
     "key": "space a a",
-    "when": "!terminalFocus && !terminalFocus && vim.mode == 'Normal'"
+    "when": "!auxiliaryBarFocus && !auxiliaryBarVisible && !terminalFocus && vim.mode == 'Normal'"
   },
   {
-    "key": "ctrl+y",
-    "command": "editor.action.acceptCursorTabSuggestion",
-    "when": "vim.mode == 'Normal' && cpp.shouldAcceptTab"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "editor.action.acceptCursorTabSuggestion",
-    "when": "cpp.shouldAcceptTab"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "editor.action.inlineSuggest.commit",
-    "when": "(inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible)"
-  },
-  // Accept suggestions when cursor is visible - Ctrl+Y as primary
-  {
-    "key": "ctrl+y",
-    "command": "editor.action.acceptCursorTabSuggestion",
-    "when": "suggestWidgetVisible && editorTextFocus"
-  },
-  {
-    "key": "ctrl+y",
-    "command": "editor.action.inlineSuggest.commit",
-    "when": "inlineSuggestionVisible && editorTextFocus"
-  },
-  // Disable Tab from accepting suggestions (allow only for indentation)
-  {
-    "key": "tab",
-    "command": "-editor.action.acceptCursorTabSuggestion"
-  },
-  {
-    "key": "tab",
-    "command": "-editor.action.inlineSuggest.commit"
-  },
-  // Terminal
-  {
-    "command": "terminal.toggleVisibility",
-    "key": "ctrl-`",
-    "when": "vim.model == 'Normal' && terminalProcessSupported"
+    "args": {
+      "commands": ["workbench.action.toggleAuxiliaryBar"]
+    },
+    "command": "runCommands",
+    "key": "space a a",
+    "when": "!auxiliaryBarFocus && auxiliaryBarVisible && !terminalFocus && vim.mode == 'Normal'"
   }
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "editor.action.accept",
+  //   "when": "vim.mode == 'Normal' && cpp.shouldAcceptTab"
+  // },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "editor.action.acceptCursorTabSuggestion",
+  //   "when": "cpp.shouldAcceptTab"
+  // },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "editor.action.inlineSuggest.commit",
+  //   "when": "(inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible)"
+  // },
+  // // Accept suggestions when cursor is visible - Ctrl+Y as primary
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "editor.action.acceptCursorTabSuggestion",
+  //   "when": "suggestWidgetVisible && editorTextFocus"
+  // },
+  // {
+  //   "key": "ctrl+y",
+  //   "command": "editor.action.inlineSuggest.commit",
+  //   "when": "inlineSuggestionVisible && editorTextFocus"
+  // },
+  // // Disable Tab from accepting suggestions (allow only for indentation)
+  // {
+  //   "key": "tab",
+  //   "command": "-editor.action.acceptCursorTabSuggestion"
+  // },
+  // {
+  //   "key": "tab",
+  //   "command": "-editor.action.inlineSuggest.commit"
+  // },
+  // // Terminal
+  // {
+  //   "command": "terminal.toggleVisibility",
+  //   "key": "ctrl-`",
+  //   "when": "vim.model == 'Normal' && terminalProcessSupported"
+  // }
 ]
